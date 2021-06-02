@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Item} from "../../UIComponents/Item";
 import styled from "styled-components";
 import {useState} from "react";
+import {Spacer} from "../../UIComponents/Spacer";
 
 export const Header = ({activeTab}) => {
 
@@ -31,6 +32,7 @@ export const Header = ({activeTab}) => {
                 <Item>
                     <Container theme={{direction: 'row', justifyContent: 'flex-end'}}>
                         <Item theme={{alignSelf: 'center'}}><Link className='link' to={"/movies/"}><TextTab theme={{ color: activeTab === 'movies' ? 'white' : 'grey' }}>movies</TextTab></Link></Item>
+                        <Item><Spacer theme={{width:'25px'}}/></Item>
                         <Item theme={{alignSelf: 'center'}}><Link className='link' to={"/favorites/"}><TextTab theme={{ color: activeTab === 'favorites' ? 'white' : 'grey' }}>favorites</TextTab></Link></Item>
                     </Container>
                 </Item>

@@ -63,13 +63,10 @@ export const Favorites = () => {
     return (
         <Body>
             <div><Header activeTab={'favorites'}/></div>
-            <div><MoviesFilter/></div>
             <div>
                 <ClipLoader color={redColor} loading={loading} css={override} size={60}/>
                 {loading ? <LoadingText>Chargement</LoadingText> : <ListMovies type={'favorites'} movies={movies}/>}
             </div>
-
-            idMovie = {idMovie}
 
             <AnimatePresence>
                 {idMovie && movie !== null &&

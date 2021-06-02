@@ -8,6 +8,7 @@ import {ListMovies} from "../ListMovies/ListMovies";
 import {MoviesFilter} from "../MoviesFilter/MoviesFilter";
 import {AnimatePresence, motion} from "framer-motion";
 import {SetMovieToFavorite} from "../../utils/Utils";
+import {Spacer} from "../../UIComponents/Spacer";
 
 const Home = () => {
     const LoadingText = styled.p`
@@ -75,7 +76,7 @@ const Home = () => {
     return (
         <Body>
             <div><Header activeTab={'movies'}/></div>
-           {/*< <div><MoviesFilter/></div>>*/}
+            <Spacer theme={{height:'15px'}}/>
             <div>
                 <input type="text" value={searchValue} placeholder="Search movies..."
                        onChange={e => setSearchValue(e.target.value)} />
